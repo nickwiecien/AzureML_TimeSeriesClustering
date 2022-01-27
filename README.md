@@ -11,5 +11,6 @@ For demonstration purposes, we leverage a [cached time-series dataset from tslea
 ## Environment Setup
 <b>Note:</b> Recommend running these notebooks on an Azure Machine Learning Compute Instance using the preconfigured `Python 3.6 - AzureML` environment.
 
-To build and run the sample pipelines contained in `./ModelTrainingPipeline` and `./BatchInferencingPipeline` the following resources are required:
+To build and run the sample pipelines contained in `./ModelTrainingPipeline` the following resources are required:
 * Azure Machine Learning Workspace
+* Attached datastore named `timeseriesdatastore` containing the file inside `sample_data\time_series_data.csv`.
