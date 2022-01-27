@@ -71,7 +71,7 @@ sz = X_train.shape[1]
 
 # Euclidean k-means
 print("Euclidean k-means")
-km = TimeSeriesKMeans(n_clusters=4, verbose=True, random_state=seed)
+km = TimeSeriesKMeans(n_clusters=4, verbose=True, random_state=101)
 model = km.fit(X_train)
 y_pred = model.predict(X_train)
 
@@ -88,6 +88,9 @@ dump(scaler, os.path.join(train_to_evaluate_pipeline_data, 'scaler.pkl'))
 
 # Generate predictions
 plt.figure()
+f = plt.figure()
+f.set_figwidth(10)
+f.set_figheight(15)
 for yi in range(4):
     plt.subplot(4, 1, yi + 1)
     for xx in X_train[y_pred == yi]:

@@ -32,7 +32,7 @@ ds = Datastore.get(ws, 'timeseriesdatastore')
 # performed here as well.
 
 # Read all raw data from blob storage & convert to a pandas data frame
-csv_paths = [(ds, 'data/*')]
+csv_paths = [(ds, 'time_series_data.csv')]
 raw_ds = Dataset.Tabular.from_delimited_files(path=csv_paths)
 raw_df = raw_ds.to_pandas_dataframe().astype(np.float64)
 
